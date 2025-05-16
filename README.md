@@ -56,8 +56,9 @@ This will open a local web interface where you can upload audio files and get tr
 
 This app can be used with any audio dataset. Example audio files are included in the `audio_dataset/` directory for testing.
 
-To use or test the application with a larger audio mp3 dataset, please install the dataset from the following link:  
+To use or test the application with audio mp3 or wav dataset, please install the dataset from the following link:  
 https://commonvoice.mozilla.org/en/datasets
+https://keithito.com/LJ-Speech-Dataset/
 
 ## Outputs
 
