@@ -1,0 +1,4 @@
+ffmpeg # System-level dependency: Make sure ffmpeg is installed on your system
+streamlit
+torchaudio
+git+https://github.com/openai/whisper.git
