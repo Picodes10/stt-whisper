@@ -24,13 +24,13 @@ if uploaded_file is not None:
     st.audio(uploaded_file, format=f"audio/{uploaded_file.type.split('/')[-1]}")
 
     with st.spinner("Transcribing..."):
-        result = model.transcribe(temp_path)
-        transcript = result["text"]
-
-    st.success("✅ Transcription Complete!")
-    st.text_area("📝 Transcript", transcript, height=300)
-
-    st.download_button("📥 Download Transcript", transcript, file_name="transcript.txt")
+        try:
+            result = model.transcribe(temp_path)
+            transcript = result["text"]
+            st.success("✅ Transcription Complete!")
+            st.text_area("📝 Transcript", transcript, height=300)
+            st.download_button("📥 Download Transcript", transcript, file_name="transcript.txt")
+        except Exception as e:
+            st.error(f"❌ Error during transcription: {e}")
 
     os.remove(temp_path)
-
